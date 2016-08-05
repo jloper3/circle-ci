@@ -6,7 +6,7 @@ dependencies:
     - pip install awscli
 test:
   override:
-    - jq '.' template.json
+    - jq '.' *.cf
 deployment:
   prod:
     branch: master
