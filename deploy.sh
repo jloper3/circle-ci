@@ -15,12 +15,12 @@ function waitOnCompletion() {
         echo $STATUS
     done
 }
-
-aws cloudformation create-stack \
+for file in $(ls -1 *.cf); do 
+   aws cloudformation create-stack \
           --stack-name $STACK_NAME \
-          --template-body file://template.json \
+          --template-body file://$file \
           --parameters ParameterKey=KeyName,ParameterValue=vpc-reference \
-          
-          
+done
+
 waitOnCompletion
           
