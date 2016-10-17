@@ -8,7 +8,15 @@ test:
   override:
     - jq '.' *.cf
 deployment:
-  prod:
+  staging:
+    environment:
+      vpc: staging
     branch: master
+    commands:
+      - ./deploy.sh
+  release:
+    environment:
+      vpc: production
+    tag: /release-.*/
     commands:
       - ./deploy.sh
