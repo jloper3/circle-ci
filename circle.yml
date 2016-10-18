@@ -9,14 +9,11 @@ test:
     - jq '.' *.cf
 deployment:
   staging:
-    environment:
-      vpc: staging
-    branch: master
+    branch: develop
     commands:
-      - ./deploy.sh
+      - VPC=STAGING ./deploy.sh
   release:
-    environment:
-      vpc: production
+    branch: master
     tag: /release-.*/
     commands:
-      - ./deploy.sh
+      - VPC=PROD ./deploy.sh
