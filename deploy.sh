@@ -6,6 +6,7 @@ ARTIFACT_ROOT=https://circle-artifacts.com/gh/circleci/circle-cloudformation
 ARTIFACT_FILE=$(find $CIRCLE_ARTIFACTS -name *-jar-with-dependencies.jar)
 ARTIFACT_URL=$ARTIFACT_ROOT/$CIRCLE_BUILD_NUM/artifacts/0$ARTIFACT_FILE
 STACK_NAME=circle-cloudformation-$CIRCLE_BUILD_NUM
+export AWS_DEFAULT_REGION=us-east-1
 
 function waitOnCompletion() {
     STATUS=IN_PROGRESS
