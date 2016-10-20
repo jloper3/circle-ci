@@ -13,7 +13,7 @@ deployment:
     owner: jloper3
     commands:
       - VPC=PROD ./deploy.sh
-  develop:
-    branch: develop
+  staging:
+    branch: master
     commands:
       - VPC=DEV ./deploy.sh
