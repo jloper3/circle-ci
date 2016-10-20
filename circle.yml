@@ -11,5 +11,6 @@ deployment:
   production:
     branch: master
     tag: /release-.*/
+    owner: jloper3
     commands:
       - VPC=PROD ./deploy.sh
