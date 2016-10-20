@@ -13,8 +13,8 @@ deployment:
     tag: /release-.*/
     commands:
       - VPC=PROD ./deploy.sh
-deployment: 
-  staging:
-    branch: develop
-    commands:
-      - VPC=STAGING ./deploy.sh
+#deployment: 
+#  staging:
+#    branch: develop
+#    commands:
+#      - VPC=STAGING ./deploy.sh
