@@ -25,7 +25,7 @@ for file in $(ls -1 *.cf); do
    aws cloudformation $CMD \
           --stack-name $STACK_NAME \
           --template-body file://$file \
-          --parameters ParameterKey=KeyName,ParameterValue=jtl3.net
+          --parameters ParameterKey=KeyName,ParameterValue=vpc-reference ParameterKey=VPCID,ParameterValue=jtl3.net
     CMD=update-stack
     waitOnCompletion
 done

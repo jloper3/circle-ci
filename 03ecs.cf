@@ -9,6 +9,10 @@
       "Type": "List<AWS::EC2::Subnet::Id>",
       "Description": "Select a default subnet ID."
     },    
+    "VPCID": {
+      "Type": "List<AWS::EC2::VPC::Id>",
+      "Description": "Select a default subnet ID."
+    },    
     "DesiredCapacity": {
       "Type": "Number",
       "Default" : "1",
