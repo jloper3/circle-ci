@@ -10,7 +10,6 @@ test:
 deployment:
   production:
     tag: /release-.*/
-    owner: jloper3
     commands:
       - VPC=PROD ./deploy.sh
   staging:
