@@ -9,8 +9,12 @@ test:
     - jq '.' *.cf
 deployment:
   production:
-    branch: master
     tag: /release-.*/
     owner: jloper3
     commands:
       - VPC=PROD ./deploy.sh
+  develop:
+    branch: develop
+    owner: jloper3
+    commands:
+      - VPC=DEV ./deploy.sh
